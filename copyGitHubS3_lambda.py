@@ -44,19 +44,19 @@ def lambda_handler(event, context):
     covid_array = ['confirmed','deaths','recovered']
     
     for element in covid_array:
-        objCount = get_s3_object_count('projectpro-covid19-test-data','covid19/'+element+'/time_series_covid19_'+element+'_global.csv')
+        objCount = get_s3_object_count('covid19-project-test1','covid19/'+element+'/time_series_covid19_'+element+'_global.csv')
         if objCount != 0:
-            file_response = s3.get_object(Bucket='projectpro-covid19-test-data', Key='covid19/'+element+'/time_series_covid19_'+element+'_global.csv')
+            file_response = s3.get_object(Bucket='covid19-project-test1', Key='covid19/'+element+'/time_series_covid19_'+element+'_global.csv')
             
             file_content = file_response['Body'].read().decode('utf-8')
             
-            s3.put_object(Bucket='projectpro-covid19-test-data', Key='covid19/archival/'+element+'/'+date+'/time_series_covid19_'+element+'_global.csv', Body=file_content)
+            s3.put_object(Bucket='covid19-project-test1', Key='covid19/archival/'+element+'/'+date+'/time_series_covid19_'+element+'_global.csv', Body=file_content)
         
         url = 'https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_'+element+'_global.csv'
         
         with urllib.request.urlopen(url) as response:
             data = response.read()
-            s3.put_object(Bucket='projectpro-covid19-test-data', Key='covid19/'+element+'/time_series_covid19_'+element+'_global.csv', Body=data)
+            s3.put_object(Bucket='covid19-project-test1', Key='covid19/'+element+'/time_series_covid19_'+element+'_global.csv', Body=data)
     
     # Send the event to the target rule
     response = eventbridge.put_events(
