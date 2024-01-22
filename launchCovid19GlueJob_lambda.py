@@ -8,7 +8,7 @@ def lambda_handler(event, context):
     glue = boto3.client('glue')
 
     # Trigger the Glue job
-    job_name = 'covid19-confirmed-test1'
+    job_name = 'new_pyspark_job'
     response = glue.start_job_run(JobName=job_name)
 
     # Print the response
