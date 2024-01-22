@@ -7,7 +7,7 @@ import time
 def lambda_handler(event, context):
     # TODO implement
     
-    job_name = 'covid19-confirmed-test1'
+    job_name = 'new_pyspark_job'
     
     # Create a Glue client
     glue = boto3.client('glue')
