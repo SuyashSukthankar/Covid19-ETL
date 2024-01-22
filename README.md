@@ -4,9 +4,9 @@
 This project aims to create a comprehensive big data pipeline that leverages various AWS tools such as AWS Lambda, AWS Glue, AWS S3, Amazon Redshift, Amazon EventBridge, and Amazon Quicksight to conduct intricate analysis on COVID-19 data. The goal is to develop an interactive dashboard that can provide insights into the trends and patterns of the virus, allowing for more informed decision-making by public health officials, researchers, and the general public.Using AWS tools I have created an ETL Pipeline to load data from the John Hopkins Github Repository, perform changes to the dataset in Pyspark, create an external Dataset on top of the S3 bucket in Redshift and finally visualize the reuslts using Amazon Quicksight.
 
 ## Tech Stack 
-Language: Python
-Package: PySpark
-Services: AWS Lambda, AWS Glue, AWS S3, Amazon Redshift, Amazon EventBridge, Amazon Quicksight
+#Language: Python
+#Package: PySpark
+#Services: AWS Lambda, AWS Glue, AWS S3, Amazon Redshift, Amazon EventBridge, Amazon Quicksight
 
 ## Dataset Used
 
