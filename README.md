@@ -13,5 +13,7 @@ John Hopkins University maintains a GitHub repository that contains up-to-date d
 
 ## Architecture Diagram
 ![image](https://github.com/SuyashSukthankar/Covid19-ETL/assets/9166373/54932d8a-660d-4e88-9614-c724317d6b14)
+
+## Dashboard
 ![image](https://github.com/SuyashSukthankar/Covid19-ETL/assets/9166373/86bf7a02-aede-4605-900b-33ac72e1255b)
 
